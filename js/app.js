@@ -1,7 +1,8 @@
 const game = new Game();
 
-document.getElementById("begin-game").addEventListener("click", () => {
+const start = document.getElementById("begin-game");
+start.addEventListener("click", () => {
   game.startGame();
-  this.style.display = "none";
+  start.style.display = "none";
   document.getElementById("play-area").style.opacity = "1";
 });

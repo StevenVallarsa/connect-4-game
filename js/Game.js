@@ -12,8 +12,16 @@ class Game {
     return [new Player("Player 1", 1, "yellow", true), new Player("Player 2", 2, "red")];
   }
 
+  get activePlayer() {
+    return this.players.find(player => player.active);
+  }
+
   /**
    * Gets game ready for play
    */
-  startGame() {}
+  startGame() {
+    this.board.drawHTMLBoard();
+    this.activePlayer.activeToken.drawHTMLToken();
+    this.ready = true;
+  }
 }

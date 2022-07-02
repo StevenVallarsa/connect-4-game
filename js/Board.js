@@ -6,7 +6,6 @@ class Board {
   }
 
   /**
-   *
    * @returns {array} 2D array of spaces
    */
   createSpaces() {
@@ -20,4 +19,21 @@ class Board {
     }
     return spaces;
   }
+
+  /**
+   * Draw board
+   */
+  drawHTMLBoard() {
+    for (let i = 0; i < this.spaces.length; i++) {
+      for (let j = 0; j < this.spaces[0].length; j++) {
+        this.spaces[i][j].drawSVGSpace();
+      }
+    }
+  }
+
+  //for (let column of this.spaces) {
+  //  for (let space of column) {
+  //    space.drawSVGSpace();
+  //  }
+  //}
 }
